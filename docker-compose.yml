@@ -7,8 +7,8 @@ services:
       - ./nginx/conf.d:/etc/nginx/conf.d
       - ./nginx/tls:/etc/nginx/tls
       - ./public:/public
-    ports:
-      - "443:443"
+        #    ports:
+        #      - "443:443"
     network_mode: host
     restart: always
 
@@ -34,7 +34,7 @@ services:
     restart: always
 
   mysql:
-    image: mysql/mysql-server:8.0.29
+    image: mysql/mysql-server:8.0.30
     environment:
       - "MYSQL_ROOT_HOST=%"
       - "MYSQL_ROOT_PASSWORD=root"
